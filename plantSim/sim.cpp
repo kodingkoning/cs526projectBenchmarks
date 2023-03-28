@@ -7,6 +7,7 @@
 #include <chrono>
 #include <set>
 #include <map>
+#include <vector>
 #include <numeric>
 #include <algorithm>
 #include <numeric>
@@ -245,7 +246,7 @@ int main(int argc, char* argv[]){
                                 }
                                 if(neighborhood[inv_index] != land_grid[i][j]) {
                                     //land_grid[i][j] = neighborhood[inv_index];
-                                    updates.push_back({i, j, neighborhood[inv_index]});
+                                    updates.push_back(make_tuple(i, j, neighborhood[inv_index]));
                                 }
                             }
                         }

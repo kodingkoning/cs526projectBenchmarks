@@ -4,3 +4,6 @@
 [submodule "vegen"]
 	path = vegen
 	url = git@github.com:kodingkoning/vegen.git
+[submodule "mfem"]
+	path = mfem
+	url = https://github.com/mfem/mfem.git
