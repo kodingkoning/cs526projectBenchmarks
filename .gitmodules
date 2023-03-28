@@ -7,3 +7,6 @@
 [submodule "mfem"]
 	path = mfem
 	url = https://github.com/mfem/mfem.git
+[submodule "benchmark"]
+	path = benchmark
+	url = https://github.com/google/benchmark.git
