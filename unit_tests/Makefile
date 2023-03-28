@@ -1,17 +1,17 @@
 CC=g++
-VEGEN=vegen-clang++
-CFLAGS=-I. -std=c++11 -O3
+VEGEN=vegen-clang
+CFLAGS=-I. -O3 -S
 
 C_SOURCES :=$(wildcard *.c)
 C_EXECUTABLE :=$(C_SOURCES:.c=)
 VEGEN_C_EXECUTABLE :=$(C_SOURCES:%.c=vegen_%)
 
-all: $(VEGEN_C_EXECUTABLE) $(C_EXECUTABLE) $(binaries)
+all: $(VEGEN_C_EXECUTABLE) $(C_EXECUTABLE)
 
-$(C_EXECUTABLE):$(C_SOURCES)
+%:%.c
 	$(CC) $< $(LDFLAGS) $(CFLAGS) -o $@
 
-$(VEGEN_C_EXECUTABLE):$(C_SOURCES)
+vegen_%:%.c
 	$(VEGEN) $< $(LDFLAGS) $(CFLAGS) -o $@
 
 .PHONY: clean
