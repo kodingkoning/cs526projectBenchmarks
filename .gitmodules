@@ -1,6 +1,3 @@
 [submodule "psi4"]
 	path = psi4
 	url = https://github.com/psi4/psi4.git
-[submodule "vegen"]
-	path = vegen
-	url = https://github.com/ychen306/vegen.git
