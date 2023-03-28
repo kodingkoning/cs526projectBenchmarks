@@ -4,3 +4,6 @@
 [submodule "vegen"]
 	path = vegen
 	url = https://github.com/ychen306/vegen.git
+[submodule "mfem"]
+	path = mfem
+	url = https://github.com/mfem/mfem.git
