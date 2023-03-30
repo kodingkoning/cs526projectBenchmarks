@@ -10,3 +10,6 @@
 [submodule "benchmark"]
 	path = benchmark
 	url = https://github.com/google/benchmark.git
+[submodule "superlu"]
+	path = superlu
+	url = git@github.com:xiaoyeli/superlu.git
