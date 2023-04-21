@@ -16,7 +16,7 @@ void dot_prod3()
 {
     for (int i = 0; i < 4; ++i)
     {
-        C[i] = A[2 * i] * B[2 * i] + A[2 * i + 1] * 4;
+        C[i] = A[2 * i] * B[2 * i] + 10 * A[2 * i + 1];
     }
 }
 
