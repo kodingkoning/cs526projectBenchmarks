@@ -302,7 +302,7 @@ int main(int argc, char* argv[]){
         fp = fopen(outfile.c_str(), "w");
         string output_tree = toString(speciation_root);
         fprintf(fp, "%s;", output_tree.c_str());
-        println("Depth of tree = %d", get_depth(speciation_root));
+        println("Depth of tree = %zu", get_depth(speciation_root));
         fclose(fp);
         delete_tree(speciation_root);
 

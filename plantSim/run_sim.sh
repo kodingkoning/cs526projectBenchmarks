@@ -7,5 +7,12 @@
 #SBATCH --output=sim_vegen_%j.log   # Standard output and error log
 #SBATCH --partition secondary-eth
 
-/usr/bin/time -v ./vegen_sim 512 1 sim_vegen_
+echo vegen
+/usr/bin/time -v ./vegen_sim 500 1 sim_vegen_
+echo llvm
+/usr/bin/time -v ./llvm_sim 500 1 llvm_sim_
+echo gcc
+/usr/bin/time -v ./gcc_sim 500 1 gcc_sim_
+echo original vegen
+/usr/bin/time -v ./og_vegen_sim 500 1 sim_og_vegen_
 
