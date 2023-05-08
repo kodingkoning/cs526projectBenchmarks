@@ -1,7 +1,7 @@
 CC=g++
 VEGEN=../vegen/build/vegen-clang++
 OG_VEGEN=../vegen/build_original/vegen-clang++
-CFLAGS=-I. -std=c++17 -O3
+CFLAGS=-I. -std=c++17 -O3 -march=native
 
 EXEC=gcc_sim vegen_sim og_vegen_sim llvm_sim
 LLVM=gcc_sim.ll vegen_sim.ll og_vegen_sim.ll llvm_sim.ll

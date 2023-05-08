@@ -1,7 +1,7 @@
 CC=clang
 OG_VEGEN=../vegen/build_original/vegen-clang
 VEGEN=../vegen/build/vegen-clang
-CFLAGS=-I. -O3
+CFLAGS=-I. -O3 -march=native
 
 C_SOURCES :=$(wildcard *.c)
 LLVM_C_EXECUTABLE :=$(C_SOURCES:%.c=llvm_%)
@@ -30,7 +30,7 @@ vegen_%:%.c
 	$(VEGEN) $< $(LDFLAGS) $(CFLAGS) -o $@
 
 vegen_%.ll:%.c
-	$(VEGEN) $< $(LDFLAGS) $(CFLAGS) -S -emit-llvm -o $@
+	$(VEGEN) $< $(LDFLAGS) $(CFLAGS) -debug -S -emit-llvm -o $@
 
 llvm_%:%.c
 	$(CC) $< $(LDFLAGS) $(CFLAGS) -o $@
