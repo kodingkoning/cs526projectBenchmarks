@@ -2,16 +2,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define SIZE 8
+int32_t A [32];
+int32_t B [32];
+int32_t C [16];
 
-int32_t A [SIZE];
-int32_t B [SIZE];
-int32_t C [SIZE];
-
-void vector_mm_min_epi16()
+void vector_add()
 {
-    for(int j = 0; j < 8; j++) {
-        C[j] = A[j] < B[j] ? A[j] : B[j];
+    for(int count = 0; count < 16; count+=4) {
+        C[count+0] = A[count+0] + B[count+0];
+        C[count+1] = A[count+1] + B[count+1];
+        C[count+2] = A[count+2] + 9;
+        C[count+3] = A[count+3] + 11;
     }
 }
 
