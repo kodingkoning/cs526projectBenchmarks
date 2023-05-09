@@ -1,15 +1,6 @@
-[submodule "psi4"]
-	path = psi4
-	url = https://github.com/psi4/psi4.git
 [submodule "vegen"]
 	path = vegen
 	url = git@github.com:kodingkoning/vegen.git
-[submodule "mfem"]
-	path = mfem
-	url = https://github.com/mfem/mfem.git
-[submodule "benchmark"]
-	path = benchmark
-	url = https://github.com/google/benchmark.git
 [submodule "superlu"]
 	path = superlu
 	url = git@github.com:xiaoyeli/superlu.git
